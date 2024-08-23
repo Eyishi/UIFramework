@@ -49,9 +49,12 @@
     <Compile Include="Assets\External\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\External\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\External\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\UIFramework\Core\ScreenControllerInterfaces.cs" />
+    <Compile Include="Assets\UIFramework\Core\UILayer.cs" />
     <Compile Include="Assets\External\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\External\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\External\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\UIFramework\Core\ScreenPropertiesInterfaces.cs" />
     <Compile Include="Assets\External\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <None Include="Assets\External\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\External\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

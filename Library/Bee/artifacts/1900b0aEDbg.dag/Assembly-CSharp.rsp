@@ -362,6 +362,9 @@
 "Assets/External/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs"
 "Assets/External/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs"
 "Assets/External/Signals.cs"
+"Assets/UIFramework/Core/ScreenControllerInterfaces.cs"
+"Assets/UIFramework/Core/ScreenPropertiesInterfaces.cs"
+"Assets/UIFramework/Core/UILayer.cs"
 -langversion:9.0
 
 /deterministic
