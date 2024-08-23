@@ -1,4 +1,5 @@
 ﻿using System;
+using UIFramework.Panel;
 
 namespace UIFramework.Core
 {
@@ -15,5 +16,10 @@ namespace UIFramework.Core
         void Hide(bool animate = true);
 
         Action<IScreenController> ScreenDestroyed { get; set; }
+    }
+
+    public interface IPanelController : IScreenController
+    {
+        PanelPriority Priority { get; }
     }
 }
