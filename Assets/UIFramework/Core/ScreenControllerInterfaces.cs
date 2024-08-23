@@ -1,4 +1,6 @@
-﻿namespace UIFramework.Core
+﻿using System;
+
+namespace UIFramework.Core
 {
     /// <summary>
     /// 所有的UI界面必须 实现的接口 ，统一的风格
@@ -11,5 +13,7 @@
         void Show(IScreenProperties props = null);//显示  
         
         void Hide(bool animate = true);
+
+        Action<IScreenController> ScreenDestroyed { get; set; }
     }
 }
