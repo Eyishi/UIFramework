@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UIFramework.Panel
 {
-    public class PanelULayer : UILayer<IPanelController>
+    public class PanelUILayer : UILayer<IPanelController>
     {
         [SerializeField] [Tooltip("优先级并行层的设置，注册到此的面板将根据和器优先级重新归属到不同的并行层对象。")]
         private PanelPriorityLayerList priorityLayers = null;

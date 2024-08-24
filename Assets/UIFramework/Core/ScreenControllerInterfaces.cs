@@ -1,5 +1,6 @@
 ﻿using System;
 using UIFramework.Panel;
+using UIFramework.Window;
 
 namespace UIFramework.Core
 {
@@ -18,8 +19,21 @@ namespace UIFramework.Core
         Action<IScreenController> ScreenDestroyed { get; set; }
     }
 
+    /// <summary>
+    /// 所有面板的接口
+    /// </summary>
     public interface IPanelController : IScreenController
     {
         PanelPriority Priority { get; }
+    }
+
+    /// <summary>
+    /// 所有窗口的接口
+    /// </summary>
+    public interface IWindowController : IScreenController
+    {
+        bool HideOnForegroundLost { get; }
+        bool IsPopup { get; }
+        WindowPriority WindowPriority { get; }
     }
 }

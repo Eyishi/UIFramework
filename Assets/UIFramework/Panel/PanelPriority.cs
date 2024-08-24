@@ -15,7 +15,7 @@ namespace UIFramework.Panel
     }
 
     /// <summary>
-    /// 实例
+    /// 每一个实例
     /// </summary>
     [System.Serializable]
     public class PanelPriorityLayerListEntry
@@ -40,7 +40,7 @@ namespace UIFramework.Panel
         }
     }
     /// <summary>
-    /// 管理列表
+    /// 管理所有entry
     /// </summary>
     [System.Serializable]
     public class PanelPriorityLayerList
@@ -54,6 +54,9 @@ namespace UIFramework.Panel
             this.paraLayer = entries;
         }
 
+        /// <summary>
+        /// 这个 优先级对应的父节点
+        /// </summary>
         private Dictionary<PanelPriority, Transform> lookup;
 
         public Dictionary<PanelPriority, Transform> ParaLayerLookup

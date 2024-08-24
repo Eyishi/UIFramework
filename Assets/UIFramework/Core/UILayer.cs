@@ -105,7 +105,7 @@ namespace UIFramework.Core
             screenTransform.SetParent(transform,false);
         }
         /// <summary>
-        /// 注册界面
+        /// 注册一个screen
         /// </summary>
         /// <param name="screenId"></param>
         /// <param name="controller"></param>
@@ -138,7 +138,7 @@ namespace UIFramework.Core
             }
         }
         /// <summary>
-        /// 注册
+        /// 注册一个界面
         /// </summary>
         /// <param name="screenId"></param>
         /// <param name="controller"></param>
@@ -149,7 +149,7 @@ namespace UIFramework.Core
             controller.ScreenDestroyed += OnScreenDestroyed;
         }
         /// <summary>
-        /// 注销
+        /// 注销一个界面
         /// </summary>
         /// <param name="screenId"></param>
         /// <param name="controller"></param>
