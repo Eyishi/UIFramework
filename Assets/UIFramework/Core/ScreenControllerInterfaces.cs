@@ -10,7 +10,7 @@ namespace UIFramework.Core
     public interface IScreenController
     {
         string ScreenId { get; set; } //界面id
-        bool IsVisible { get; set; }//是否在显示
+        bool IsVisible { get;  }//是否在显示
         
         void Show(IScreenProperties props = null);//显示  
         
