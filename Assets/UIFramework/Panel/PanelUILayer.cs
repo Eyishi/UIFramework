@@ -29,6 +29,7 @@ namespace UIFramework.Panel
         /// <param name="screenTransform"></param>
         public override void ReparentScreen(IScreenController controller, Transform screenTransform)
         {
+            //controller 是不是 PanelController
             var ctl = controller as IPanelController;
             if (ctl !=null)
             {

@@ -15,5 +15,13 @@ namespace UIFramework.Window
             Screen = screen;
             Properties = properties;
         }
+
+        /// <summary>
+        /// 显示界面
+        /// </summary>
+        public void Show()
+        {
+            Screen.Show(Properties);
+        }
     }
 }

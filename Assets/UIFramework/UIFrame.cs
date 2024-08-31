@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace UIFramework
 {
     /// <summary>
-    /// 所有对外接口在这，相当于UIManager之类的
+    /// 所有对外接口在这，相当于Manager之类的
     /// </summary>
     public class UIFrame : MonoBehaviour
     {
@@ -15,7 +15,7 @@ namespace UIFramework
 
         private PanelUILayer panelLayer;
 
-        private Canvas mainCanvas;
+        private Canvas mainCanvas;//主画布
         private GraphicRaycaster graphicRaycaster;
 
         /// <summary>

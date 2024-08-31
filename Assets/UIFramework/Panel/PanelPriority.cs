@@ -4,7 +4,7 @@ using UnityEngine;
 namespace UIFramework.Panel
 {
     /// <summary>
-    /// 规定面板的层级，方便管理
+    /// 面板的层级，方便管理
     /// </summary>
     public enum PanelPriority
     {
@@ -15,7 +15,7 @@ namespace UIFramework.Panel
     }
 
     /// <summary>
-    /// 每一个实例
+    /// 不同的面板的对应的优先级
     /// </summary>
     [System.Serializable]
     public class PanelPriorityLayerListEntry
@@ -25,7 +25,7 @@ namespace UIFramework.Panel
         private PanelPriority priority;
         
         [SerializeField]
-        [Tooltip("执行下面板的优先级")]
+        [Tooltip("此优先级下所有面板的父节点")]
         private Transform targetParent;
         
         public PanelPriority Priority
@@ -72,6 +72,9 @@ namespace UIFramework.Panel
             }
         }
 
+        /// <summary>
+        /// 初始化
+        /// </summary>
         private void CacheLookup()
         {
             lookup = new Dictionary<PanelPriority, Transform>();

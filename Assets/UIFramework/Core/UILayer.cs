@@ -6,11 +6,14 @@ using UnityEngine;
 namespace UIFramework.Core
 {
     /// <summary>
-    /// 基础的UI layer层
+    /// 基础的UI layer层  
     /// </summary>
     /// <typeparam name="TScreen"></typeparam>
     public abstract class UILayer<TScreen> :MonoBehaviour where TScreen : IScreenController
     {
+        /// <summary>
+        /// 注册的界面
+        /// </summary>
         protected Dictionary<string, TScreen> registerScreen;
 
         #region 抽象接口
@@ -79,6 +82,14 @@ namespace UIFramework.Core
         }
 
         /// <summary>
+        /// 关闭所有界面
+        /// </summary>
+        /// <param name="shouldAnimateWhenHiding"></param>
+        public virtual void HideAll(bool shouldAnimateWhenHiding)
+        {
+            
+        }
+        /// <summary>
         /// 是否包含这个id
         /// </summary>
         /// <param name="screenid"></param>
@@ -122,7 +133,7 @@ namespace UIFramework.Core
             }
         }
         /// <summary>
-        /// 注销
+        /// 注销这个界面
         /// </summary>
         /// <param name="screen"></param>
         /// <param name="screenScreenId"></param>
