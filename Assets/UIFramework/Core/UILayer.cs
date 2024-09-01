@@ -14,7 +14,7 @@ namespace UIFramework.Core
         /// <summary>
         /// 注册的界面
         /// </summary>
-        protected Dictionary<string, TScreen> registerScreen;
+        protected Dictionary<string, TScreen> registeredScreens;
 
         #region 抽象接口
         /// <summary>
@@ -40,7 +40,7 @@ namespace UIFramework.Core
         public void ShowScreenById(string screenId)
         {
             TScreen ctl;
-            if (registerScreen.TryGetValue(screenId,out ctl))
+            if (registeredScreens.TryGetValue(screenId,out ctl))
             {
                 ShowScreen(ctl);
             }
@@ -54,7 +54,7 @@ namespace UIFramework.Core
             where Tprops : IScreenProperties
         {
             TScreen ctl;
-            if (registerScreen.TryGetValue(screenId,out ctl))
+            if (registeredScreens.TryGetValue(screenId,out ctl))
             {
                 ShowScreen(ctl,properties);
             }
@@ -71,7 +71,7 @@ namespace UIFramework.Core
         public void HideScreenById(string screenId)
         {
             TScreen ctl;
-            if (registerScreen.TryGetValue(screenId,out ctl))
+            if (registeredScreens.TryGetValue(screenId,out ctl))
             {
                 HideScreen(ctl);
             }
@@ -96,7 +96,7 @@ namespace UIFramework.Core
         /// <returns></returns>
         public bool IsScreenRegistered(string screenid)
         {
-            return registerScreen.ContainsKey(screenid);
+            return registeredScreens.ContainsKey(screenid);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace UIFramework.Core
         /// </summary>
         public virtual void Initialize()
         {
-            registerScreen = new Dictionary<string, TScreen>();
+            registeredScreens = new Dictionary<string, TScreen>();
         }
         /// <summary>
         /// 传进来的界面当做层的子节点
@@ -122,7 +122,7 @@ namespace UIFramework.Core
         /// <param name="controller"></param>
         public void RegisterScreen(string screenId, TScreen controller)
         {
-            if (!registerScreen.ContainsKey(screenId))
+            if (!registeredScreens.ContainsKey(screenId))
             {
                 //注册 这个界面
                 ProcessScreenRegister(screenId, controller);
@@ -137,9 +137,9 @@ namespace UIFramework.Core
         /// </summary>
         /// <param name="screen"></param>
         /// <param name="screenScreenId"></param>
-        private void UnregisterScreen( string screenId,TScreen screen)
+        public void UnregisterScreen( string screenId,TScreen screen)
         {
-            if (registerScreen.ContainsKey(screenId))
+            if (registeredScreens.ContainsKey(screenId))
             {
                 ProcessScreenUnRegister(screenId,screen);
             }
@@ -156,7 +156,7 @@ namespace UIFramework.Core
         protected virtual void ProcessScreenRegister(string screenId, TScreen controller)
         {
             controller.ScreenId = screenId;
-            registerScreen.Add(screenId,controller);
+            registeredScreens.Add(screenId,controller);
             controller.ScreenDestroyed += OnScreenDestroyed;
         }
         /// <summary>
@@ -167,7 +167,7 @@ namespace UIFramework.Core
         protected virtual void ProcessScreenUnRegister(string screenId, TScreen controller)
         {
             controller.ScreenDestroyed -= OnScreenDestroyed;
-            registerScreen.Remove(screenId);
+            registeredScreens.Remove(screenId);
         }
         
         /// <summary>
@@ -178,7 +178,7 @@ namespace UIFramework.Core
         private void OnScreenDestroyed(IScreenController screen)
         {
             if (!string.IsNullOrEmpty(screen.ScreenId) && 
-                registerScreen.ContainsKey(screen.ScreenId))
+                registeredScreens.ContainsKey(screen.ScreenId))
             {
                 UnregisterScreen(screen.ScreenId,(TScreen)screen);
             }

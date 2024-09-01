@@ -36,7 +36,7 @@ namespace UIFramework.Window
         public override void Initialize()
         {
             base.Initialize();
-            registerScreen = new Dictionary<string, IWindowController>();
+            registeredScreens = new Dictionary<string, IWindowController>();
             
             windowQueue = new Queue<WindowHistoryEntry>();
             windowHistory = new Stack<WindowHistoryEntry>();

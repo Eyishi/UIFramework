@@ -22,6 +22,15 @@ namespace UIFramework.Panel
             screen.Hide();
         }
 
+        public bool IsPanelVisible(string panelId) {
+            IPanelController panel;
+            if (registeredScreens.TryGetValue(panelId, out panel)) {
+                return panel.IsVisible;
+            }
+
+            return false;
+        }
+        
         /// <summary>
         /// 设置屏  这个屏幕的父节点
         /// </summary>

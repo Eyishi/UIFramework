@@ -7,7 +7,6 @@ namespace UIFramework.Core
     public abstract class UIScreenController<TProps> : MonoBehaviour, IScreenController
         where TProps : IScreenProperties
     {
-        
         [Header("Screen Animations")] 
         [Tooltip("界面显示的动画")] 
         [SerializeField]
