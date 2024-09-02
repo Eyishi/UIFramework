@@ -2,7 +2,7 @@
 
 using Utils;
 
-namespace UIFrameworkExamples.Scripts.ScreenController
+namespace UIFramework.Examples
 {
     public class StartDemoSignal : ASignal{}
     

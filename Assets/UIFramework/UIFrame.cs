@@ -84,7 +84,7 @@ namespace UIFramework
                     windowLayer.RequestScreenUnblock += OnRequestScreenUnblock;
                 }
             }
-            graphicRaycaster = mainCanvas.GetComponent<GraphicRaycaster>();
+            graphicRaycaster = MainCanvas.GetComponent<GraphicRaycaster>();
         }
         
         /// <summary>

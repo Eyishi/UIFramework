@@ -1,4 +1,4 @@
-﻿namespace UIFrameworkExamples.Scripts
+﻿namespace UIFramework.Examples
 {
     public sealed class ScreenIds
     {

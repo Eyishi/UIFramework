@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using UIFramework.Core;
+
 using UnityEngine;
 
 namespace UIFramework
@@ -60,9 +60,9 @@ namespace UIFramework
         /// </summary>
         /// <param name="screenId"></param>
         /// <param name="controller"></param>
-        protected override void ProcessScreenUnRegister(string screenId, IWindowController controller)
+        protected override void ProcessScreenUnregister(string screenId, IWindowController controller)
         {
-            base.ProcessScreenUnRegister(screenId, controller);
+            base.ProcessScreenUnregister(screenId, controller);
             controller.InTransitionFinished -= OnInAnimationFinished;
             controller.OutTransitionFinished -= OnOutAnimationFinished;
             controller.CloseRequest -= OnCloseRequestedByWindow;

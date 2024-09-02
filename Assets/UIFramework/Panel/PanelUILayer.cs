@@ -1,5 +1,4 @@
-﻿using UIFramework.Core;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace UIFramework
 {

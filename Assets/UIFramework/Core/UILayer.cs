@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UIFramework.Core;
 using UnityEngine;
 
-namespace UIFramework.Core
+namespace UIFramework
 {
     /// <summary>
     /// 基础的UI layer层  
@@ -141,7 +140,7 @@ namespace UIFramework.Core
         {
             if (registeredScreens.ContainsKey(screenId))
             {
-                ProcessScreenUnRegister(screenId,screen);
+                ProcessScreenUnregister(screenId,screen);
             }
             else
             {
@@ -164,7 +163,7 @@ namespace UIFramework.Core
         /// </summary>
         /// <param name="screenId"></param>
         /// <param name="controller"></param>
-        protected virtual void ProcessScreenUnRegister(string screenId, TScreen controller)
+        protected virtual void ProcessScreenUnregister(string screenId, TScreen controller)
         {
             controller.ScreenDestroyed -= OnScreenDestroyed;
             registeredScreens.Remove(screenId);

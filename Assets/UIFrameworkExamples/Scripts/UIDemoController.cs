@@ -1,28 +1,29 @@
 ﻿using System;
-using UIFramework;
-using UnityEngine;
-using Utils;
+using System.Collections.Generic;
 
-namespace UIFrameworkExamples.Scripts
+using Utils;
+using UnityEngine;
+
+namespace UIFramework.Examples
 {
     public class UIDemoController : MonoBehaviour
     {
         [SerializeField] private UISettings defaultUISettings = null;
-        //[SerializeField] private FakePlayerData fakePlayerData = null;
+        // [SerializeField] private FakePlayerData fakePlayerData = null;
         [SerializeField] private Camera cam = null;
         [SerializeField] private Transform transformToFollow = null;
-        
+
         private UIFrame uiFrame;
 
-        private void Awake()
-        {
+        private void Awake() {
             uiFrame = defaultUISettings.CreateUIInstance();
-            // Signals.Get<StartDemoSignal>().AddListener(OnStartDemo);
+            Signals.Get<StartDemoSignal>().AddListener(OnStartDemo);
             // Signals.Get<NavigateToWindowSignal>().AddListener(OnNavigateToWindow);
             // Signals.Get<ShowConfirmationPopupSignal>().AddListener(OnShowConfirmationPopup);
         }
+
         private void OnDestroy() {
-            // Signals.Get<StartDemoSignal>().RemoveListener(OnStartDemo);
+            Signals.Get<StartDemoSignal>().RemoveListener(OnStartDemo);
             // Signals.Get<NavigateToWindowSignal>().RemoveListener(OnNavigateToWindow);
             // Signals.Get<ShowConfirmationPopupSignal>().RemoveListener(OnShowConfirmationPopup);
         }
@@ -51,12 +52,10 @@ namespace UIFrameworkExamples.Scripts
             //         uiFrame.OpenWindow(windowId);
             //         break;
             // }
-            uiFrame.OpenWindow(windowId);
         }
 
         // private void OnShowConfirmationPopup(ConfirmationPopupProperties popupPayload) {
         //     uiFrame.OpenWindow(ScreenIds.ConfirmationPopup, popupPayload);
         // }
     }
-    
 }
