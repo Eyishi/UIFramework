@@ -4,7 +4,7 @@ namespace UIFramework
     /// <summary>
     /// 所有的UI界面必须 实现的接口，统一的风格
     /// </summary>
-    public interface IScreenController
+    public interface   IScreenController
     {
         string ScreenId { get; set; } //界面id
         bool IsVisible { get;  }//是否在显示

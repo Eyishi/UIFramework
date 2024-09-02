@@ -18,13 +18,13 @@ namespace UIFramework.Examples
         private void Awake() {
             uiFrame = defaultUISettings.CreateUIInstance();
             Signals.Get<StartDemoSignal>().AddListener(OnStartDemo);
-            // Signals.Get<NavigateToWindowSignal>().AddListener(OnNavigateToWindow);
+            Signals.Get<NavigateToWindowSignal>().AddListener(OnNavigateToWindow);
             // Signals.Get<ShowConfirmationPopupSignal>().AddListener(OnShowConfirmationPopup);
         }
 
         private void OnDestroy() {
             Signals.Get<StartDemoSignal>().RemoveListener(OnStartDemo);
-            // Signals.Get<NavigateToWindowSignal>().RemoveListener(OnNavigateToWindow);
+            Signals.Get<NavigateToWindowSignal>().RemoveListener(OnNavigateToWindow);
             // Signals.Get<ShowConfirmationPopupSignal>().RemoveListener(OnShowConfirmationPopup);
         }
 

@@ -31,7 +31,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 88630437134135246}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -88,8 +87,8 @@ GameObject:
   - component: {fileID: 7797202251746677583}
   - component: {fileID: 3411222907738474386}
   - component: {fileID: 345793894806965386}
-  - component: {fileID: 1080301906137745222}
   - component: {fileID: 4982524321882832074}
+  - component: {fileID: 5022294557515415716}
   m_Layer: 5
   m_Name: NavigationButton
   m_TagString: Untagged
@@ -112,7 +111,6 @@ RectTransform:
   - {fileID: 8338613314173166000}
   - {fileID: 1522472831179331385}
   m_Father: {fileID: 7939089720915630041}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -201,8 +199,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1080301906137745222}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 5022294557515415716}
+        m_TargetAssemblyTypeName: UIFramework.Examples.Widget.NavigationPanelButton,
+          Assembly-CSharp
         m_MethodName: UI_Click
         m_Mode: 1
         m_Arguments:
@@ -213,20 +212,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1080301906137745222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3588384642012459075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 915532acc8b7d534c86fdff46e6a0be6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonLabel: {fileID: 4918406774104503966}
-  icon: {fileID: 5844606152381198886}
 --- !u!114 &4982524321882832074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +232,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &5022294557515415716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3588384642012459075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5c7e4b5a7149c6a91eed67ddd5e6bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonLabel: {fileID: 4918406774104503966}
+  icon: {fileID: 5844606152381198886}
 --- !u!1 &3955197997429667027
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,10 +257,10 @@ GameObject:
   - component: {fileID: 7939089720915630041}
   - component: {fileID: 1483171869872550296}
   - component: {fileID: 1743815660588205210}
-  - component: {fileID: 1581788129724897019}
-  - component: {fileID: 7137240126342042863}
-  - component: {fileID: 3626000749755598332}
   - component: {fileID: 111474194970382263}
+  - component: {fileID: 7343936552026662312}
+  - component: {fileID: 8522999378106183302}
+  - component: {fileID: 2452150688127076546}
   m_Layer: 5
   m_Name: NavigationPanel
   m_TagString: Untagged
@@ -283,7 +282,6 @@ RectTransform:
   m_Children:
   - {fileID: 88630437134135246}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -328,75 +326,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1581788129724897019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3955197997429667027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 800b00f1adb3ccb42bb2cfee5cf1af23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animIn: {fileID: 7137240126342042863}
-  animOut: {fileID: 3626000749755598332}
-  properties:
-    priority: 0
-  navigationTargets:
-  - sprite: {fileID: 21300000, guid: f3631f526401a10479488ceed9fb3f33, type: 3}
-    buttonText: "\u4E3B\u9875"
-    targetScreen: HomeWindow
-  - sprite: {fileID: 21300000, guid: ff8b2c345452818449c57d99b7cebaff, type: 3}
-    buttonText: "\u6570\u636E"
-    targetScreen: PlayerWindow
-  - sprite: {fileID: 21300000, guid: cb2abb7033b73b942bc51434daa6167d, type: 3}
-    buttonText: "\u5F39\u51FA"
-    targetScreen: PopupExampleWindow
-  - sprite: {fileID: 21300000, guid: fb78cfb5c22903d40b2ccea7b662ecff, type: 3}
-    buttonText: "\u5C4F\u5E55\u76F8\u673A"
-    targetScreen: ThreeDExample
-  - sprite: {fileID: 21300000, guid: abd2627bee866494b8620acce834aef7, type: 3}
-    buttonText: "\u4E3B\u76F8\u673A"
-    targetScreen: CameraProjectionWindow
-  templateButton: {fileID: 1080301906137745222}
---- !u!114 &7137240126342042863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3955197997429667027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f0ffd164e4450f439d7c219e6c88ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  origin: 4
-  isOutAnimation: 0
-  duration: 0.5
-  doFade: 0
-  fadeDurationPercent: 0.5
-  ease: 30
---- !u!114 &3626000749755598332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3955197997429667027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f0ffd164e4450f439d7c219e6c88ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  origin: 4
-  isOutAnimation: 0
-  duration: 0.25
-  doFade: 0
-  fadeDurationPercent: 0.5
-  ease: 1
 --- !u!114 &111474194970382263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,6 +352,75 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7343936552026662312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955197997429667027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632af84421674f789eba2f840e75fcdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animIn: {fileID: 8522999378106183302}
+  animOut: {fileID: 2452150688127076546}
+  properties:
+    priority: 0
+  navigationTargets:
+  - sprite: {fileID: 21300000, guid: f3631f526401a10479488ceed9fb3f33, type: 3}
+    buttonText: "\u4E3B\u9875"
+    targetScreen: HomeWindow
+  - sprite: {fileID: 21300000, guid: ff8b2c345452818449c57d99b7cebaff, type: 3}
+    buttonText: "\u6570\u636E"
+    targetScreen: PlayerWindow
+  - sprite: {fileID: 21300000, guid: cb2abb7033b73b942bc51434daa6167d, type: 3}
+    buttonText: "\u5F39\u51FA"
+    targetScreen: PopupExampleWindow
+  - sprite: {fileID: 21300000, guid: fb78cfb5c22903d40b2ccea7b662ecff, type: 3}
+    buttonText: "\u5C4F\u5E55\u76F8\u673A"
+    targetScreen: ThreeDExample
+  - sprite: {fileID: 21300000, guid: abd2627bee866494b8620acce834aef7, type: 3}
+    buttonText: "\u4E3B\u76F8\u673A"
+    targetScreen: CameraProjectionWindow
+  templateButton: {fileID: 5022294557515415716}
+--- !u!114 &8522999378106183302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955197997429667027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0651e189d6343b68eefa08a8f8118ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: 4
+  isOutAnimation: 0
+  duration: 0.5
+  doFade: 0
+  fadeDurationPercent: 0.5
+  ease: 30
+--- !u!114 &2452150688127076546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955197997429667027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0651e189d6343b68eefa08a8f8118ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: 4
+  isOutAnimation: 0
+  duration: 0.25
+  doFade: 0
+  fadeDurationPercent: 0.5
+  ease: 1
 --- !u!1 &9119580892891632796
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +452,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 88630437134135246}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}

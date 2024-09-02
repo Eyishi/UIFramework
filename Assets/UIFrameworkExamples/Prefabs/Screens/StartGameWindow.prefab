@@ -279,8 +279,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 289596481915869791}
+        m_TargetAssemblyTypeName: UIFramework.Examples.StartWindowController, Assembly-CSharp
         m_MethodName: UI_Start
         m_Mode: 1
         m_Arguments:
@@ -385,6 +385,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animIn: {fileID: 5977806625509618996}
   animOut: {fileID: 7138073531492542610}
+  properties:
+    hideOnForegroundLost: 1
+    windowQueuePriority: 0
+    isPopup: 0
 --- !u!114 &5977806625509618996
 MonoBehaviour:
   m_ObjectHideFlags: 0
