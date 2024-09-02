@@ -1,6 +1,6 @@
 ﻿using UIFramework.Core;
 
-namespace UIFramework.Panel
+namespace UIFramework
 {
     public abstract class PanelController : APanelController<PanelProperties> { }
 

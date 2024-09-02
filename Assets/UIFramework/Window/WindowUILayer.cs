@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UIFramework.Core;
 using UnityEngine;
 
-namespace UIFramework.Window
+namespace UIFramework
 {
     /// <summary>
     /// 这个layer层控制所有的窗口

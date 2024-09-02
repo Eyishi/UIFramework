@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace UIFramework.Panel
+namespace UIFramework
 {
     /// <summary>
     /// 面板的层级，方便管理

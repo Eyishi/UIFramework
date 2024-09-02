@@ -1,6 +1,6 @@
-﻿using UIFramework.Core;
+﻿
 
-namespace UIFramework.Window
+namespace UIFramework
 {
     /// <summary>
     /// 窗口管理类
@@ -31,7 +31,7 @@ namespace UIFramework.Window
         public virtual void UI_Close() {
             CloseRequest(this);
         }
-    
+        
         protected sealed override void SetProperties(TProps props) {
             if (props != null) {
                 if (!props.SuppressPrefabProperties) {

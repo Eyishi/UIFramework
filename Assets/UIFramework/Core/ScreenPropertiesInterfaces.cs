@@ -1,7 +1,5 @@
-﻿using UIFramework.Panel;
-using UIFramework.Window;
-
-namespace UIFramework.Core
+﻿
+namespace UIFramework
 {
     /// <summary>
     /// 所有界面的属性接口

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace UIFramework.ViewAnimation
+namespace UIFramework
 {
     /// <summary>
     /// 界面动画组件

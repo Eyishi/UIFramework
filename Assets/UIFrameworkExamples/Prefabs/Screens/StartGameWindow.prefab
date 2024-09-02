@@ -31,7 +31,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8294762724504813984}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -111,7 +110,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8749973151181950828}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -193,7 +191,6 @@ RectTransform:
   m_Children:
   - {fileID: 2527882790160811346}
   m_Father: {fileID: 8749973151181950828}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -282,7 +279,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6812951680411409494}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: UI_Start
         m_Mode: 1
@@ -305,9 +302,9 @@ GameObject:
   - component: {fileID: 8749973151181950828}
   - component: {fileID: 7451711150524851965}
   - component: {fileID: 8614912029994708458}
-  - component: {fileID: 6812951680411409494}
-  - component: {fileID: 7772959813813847272}
-  - component: {fileID: 3947463569980931984}
+  - component: {fileID: 289596481915869791}
+  - component: {fileID: 5977806625509618996}
+  - component: {fileID: 7138073531492542610}
   m_Layer: 5
   m_Name: StartGameWindow
   m_TagString: Untagged
@@ -330,7 +327,6 @@ RectTransform:
   - {fileID: 3850208934447900450}
   - {fileID: 8294762724504813984}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -375,7 +371,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6812951680411409494
+--- !u!114 &289596481915869791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -384,16 +380,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7617306793594988998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18cc5984687341548acdac6ef7ea7e6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 443630f55db94e4fa1d08318195793b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animIn: {fileID: 7772959813813847272}
-  animOut: {fileID: 3947463569980931984}
-  properties:
-    hideOnForegroundLost: 1
-    windowQueuePriority: 0
-    isPopup: 0
---- !u!114 &7772959813813847272
+  animIn: {fileID: 5977806625509618996}
+  animOut: {fileID: 7138073531492542610}
+--- !u!114 &5977806625509618996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,12 +394,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7617306793594988998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9739af8e894b7b8db28faf4bb2114d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5db7fc9fc8624a2e9379e7fcfef4f712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 1
   fadeOut: 0
---- !u!114 &3947463569980931984
+--- !u!114 &7138073531492542610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,7 +408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7617306793594988998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9739af8e894b7b8db28faf4bb2114d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5db7fc9fc8624a2e9379e7fcfef4f712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.25

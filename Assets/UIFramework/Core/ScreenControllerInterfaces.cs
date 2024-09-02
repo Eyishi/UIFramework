@@ -1,8 +1,5 @@
 ﻿using System;
-using UIFramework.Panel;
-using UIFramework.Window;
-
-namespace UIFramework.Core
+namespace UIFramework
 {
     /// <summary>
     /// 所有的UI界面必须 实现的接口，统一的风格

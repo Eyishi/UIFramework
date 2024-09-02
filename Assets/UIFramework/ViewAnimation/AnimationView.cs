@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using UIFramework.ViewAnimation;
+
 using UnityEngine;
 
 namespace UIFramework.Examples

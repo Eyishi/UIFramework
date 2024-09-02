@@ -1,4 +1,4 @@
-﻿namespace UIFramework.Window
+﻿namespace UIFramework
 {
     public enum WindowPriority
     {

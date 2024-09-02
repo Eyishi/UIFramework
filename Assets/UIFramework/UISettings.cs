@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using UIFramework.Core;
+
 using UnityEngine;
 
 namespace UIFramework
@@ -24,7 +24,7 @@ namespace UIFramework
             public UIFrame CreateUIInstance(bool instanceAndRegisterScreens = true)
             {
                 var newUI = Instantiate(templateUIPrefab);
-
+                
                 if (instanceAndRegisterScreens)
                 {
                     foreach (var screen in screensToRegister)

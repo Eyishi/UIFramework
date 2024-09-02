@@ -17,15 +17,14 @@ namespace UIFrameworkExamples.Scripts
         private void Awake()
         {
             uiFrame = defaultUISettings.CreateUIInstance();
-            
-            Signals.Get<StartDemoSignal>().AddListener(OnStartDemo);
-            Signals.Get<NavigateToWindowSignal>().AddListener(OnNavigateToWindow);
-            Signals.Get<ShowConfirmationPopupSignal>().AddListener(OnShowConfirmationPopup);
+            // Signals.Get<StartDemoSignal>().AddListener(OnStartDemo);
+            // Signals.Get<NavigateToWindowSignal>().AddListener(OnNavigateToWindow);
+            // Signals.Get<ShowConfirmationPopupSignal>().AddListener(OnShowConfirmationPopup);
         }
         private void OnDestroy() {
-            Signals.Get<StartDemoSignal>().RemoveListener(OnStartDemo);
-            Signals.Get<NavigateToWindowSignal>().RemoveListener(OnNavigateToWindow);
-            Signals.Get<ShowConfirmationPopupSignal>().RemoveListener(OnShowConfirmationPopup);
+            // Signals.Get<StartDemoSignal>().RemoveListener(OnStartDemo);
+            // Signals.Get<NavigateToWindowSignal>().RemoveListener(OnNavigateToWindow);
+            // Signals.Get<ShowConfirmationPopupSignal>().RemoveListener(OnShowConfirmationPopup);
         }
 
         private void Start() {
@@ -40,23 +39,24 @@ namespace UIFrameworkExamples.Scripts
         private void OnNavigateToWindow(string windowId) {
             uiFrame.CloseCurrentWindow();
 
-            switch (windowId) {
-                case ScreenIds.PlayerWindow:
-                    uiFrame.OpenWindow(windowId, new PlayerWindowProperties(fakePlayerData.LevelProgress));
-                    break;
-                case ScreenIds.CameraProjectionWindow:
-                    transformToFollow.parent.gameObject.SetActive(true);
-                    uiFrame.OpenWindow(windowId, new CameraProjectionWindowProperties(cam, transformToFollow));
-                    break;
-                default:
-                    uiFrame.OpenWindow(windowId);
-                    break;
-            }
+            // switch (windowId) {
+            //     case ScreenIds.PlayerWindow:
+            //         uiFrame.OpenWindow(windowId, new PlayerWindowProperties(fakePlayerData.LevelProgress));
+            //         break;
+            //     case ScreenIds.CameraProjectionWindow:
+            //         transformToFollow.parent.gameObject.SetActive(true);
+            //         uiFrame.OpenWindow(windowId, new CameraProjectionWindowProperties(cam, transformToFollow));
+            //         break;
+            //     default:
+            //         uiFrame.OpenWindow(windowId);
+            //         break;
+            // }
+            uiFrame.OpenWindow(windowId);
         }
 
-        private void OnShowConfirmationPopup(ConfirmationPopupProperties popupPayload) {
-            uiFrame.OpenWindow(ScreenIds.ConfirmationPopup, popupPayload);
-        }
+        // private void OnShowConfirmationPopup(ConfirmationPopupProperties popupPayload) {
+        //     uiFrame.OpenWindow(ScreenIds.ConfirmationPopup, popupPayload);
+        // }
     }
     
 }

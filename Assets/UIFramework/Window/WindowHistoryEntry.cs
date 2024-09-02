@@ -1,6 +1,6 @@
 ﻿using UIFramework.Core;
 
-namespace UIFramework.Window
+namespace UIFramework
 {
     /// <summary>
     /// 窗口记录和队列

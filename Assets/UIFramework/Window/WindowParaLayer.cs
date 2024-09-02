@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace UIFramework.Window
+namespace UIFramework
 {
     
     /// <summary>

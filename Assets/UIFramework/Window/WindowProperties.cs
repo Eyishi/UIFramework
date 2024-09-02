@@ -1,7 +1,7 @@
 ﻿using UIFramework.Core;
 using UnityEngine;
 
-namespace UIFramework.Window
+namespace UIFramework
 {
     /// <summary>
     /// 窗口的通用属性

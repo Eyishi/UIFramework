@@ -1,9 +1,10 @@
-﻿using System;
-using UIFramework.ViewAnimation;
-using UnityEngine;
-
-namespace UIFramework.Core
+﻿using UnityEngine;
+using System;
+namespace UIFramework
 {
+    /// <summary>
+    /// UI界面的基类，窗口，面板这些都继承它，比如 AWindowController，PanelController
+    /// </summary>
     public abstract class UIScreenController<TProps> : MonoBehaviour, IScreenController
         where TProps : IScreenProperties
     {
@@ -132,7 +133,7 @@ namespace UIFramework.Core
         {
             properties = props;
         }
-        
+
         /// <summary>
         /// 在显示的时候处理一些层级，或者属性处理等，具体看继承者重写了
         /// </summary>

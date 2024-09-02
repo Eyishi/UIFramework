@@ -1,7 +1,7 @@
 ﻿using UIFramework.Core;
 using UnityEngine;
 
-namespace UIFramework.Panel
+namespace UIFramework
 {
     public class PanelUILayer : UILayer<IPanelController>
     {

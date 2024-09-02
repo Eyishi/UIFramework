@@ -1,7 +1,5 @@
 ﻿using System;
-using UIFramework.Core;
-using UIFramework.Panel;
-using UIFramework.Window;
+
 using UnityEngine;
 using UnityEngine.UI;
 

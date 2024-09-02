@@ -1,5 +1,5 @@
 ﻿using System;
-using UIFramework.ViewAnimation;
+
 using UnityEngine;
 
 namespace UIFramework
