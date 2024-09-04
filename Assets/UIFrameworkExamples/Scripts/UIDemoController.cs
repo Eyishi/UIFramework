@@ -19,13 +19,13 @@ namespace UIFramework.Examples
             uiFrame = defaultUISettings.CreateUIInstance();
             Signals.Get<StartDemoSignal>().AddListener(OnStartDemo);
             Signals.Get<NavigateToWindowSignal>().AddListener(OnNavigateToWindow);
-            // Signals.Get<ShowConfirmationPopupSignal>().AddListener(OnShowConfirmationPopup);
+            Signals.Get<ShowConfirmationPopupSignal>().AddListener(OnShowConfirmationPopup);
         }
 
         private void OnDestroy() {
             Signals.Get<StartDemoSignal>().RemoveListener(OnStartDemo);
             Signals.Get<NavigateToWindowSignal>().RemoveListener(OnNavigateToWindow);
-            // Signals.Get<ShowConfirmationPopupSignal>().RemoveListener(OnShowConfirmationPopup);
+            Signals.Get<ShowConfirmationPopupSignal>().RemoveListener(OnShowConfirmationPopup);
         }
 
         private void Start() {
@@ -54,8 +54,8 @@ namespace UIFramework.Examples
             }
         }
 
-        // private void OnShowConfirmationPopup(ConfirmationPopupProperties popupPayload) {
-        //     uiFrame.OpenWindow(ScreenIds.ConfirmationPopup, popupPayload);
-        // }
+        private void OnShowConfirmationPopup(ConfirmationPopupProperties popupPayload) {
+            uiFrame.OpenWindow(ScreenIds.ConfirmationPopup, popupPayload);
+        }
     }
 }

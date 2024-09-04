@@ -3,7 +3,7 @@
 namespace UIFramework
 {
     /// <summary>
-    /// 窗口管理类
+    /// 窗口管理类  
     /// </summary>
     public abstract class WindowController : WindowController<WindowProperties> { }
 
