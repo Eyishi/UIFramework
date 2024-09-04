@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b11b6e8c98789024f8399c1d2ea4e995, type: 3}
+  m_Script: {fileID: 11500000, guid: eec82e3c6d934d86a00725938ee95070, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   levelProgress:

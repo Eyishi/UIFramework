@@ -44,10 +44,10 @@ namespace UIFramework.Examples
                 case ScreenIds.PlayerWindow:
                     uiFrame.OpenWindow(windowId, new PlayerWindowProperties(fakePlayerData.LevelProgress));
                     break;
-                // case ScreenIds.CameraProjectionWindow:
-                //     transformToFollow.parent.gameObject.SetActive(true);
-                //     uiFrame.OpenWindow(windowId, new CameraProjectionWindowProperties(cam, transformToFollow));
-                //     break;
+                case ScreenIds.CameraProjectionWindow:
+                    transformToFollow.parent.gameObject.SetActive(true);
+                    uiFrame.OpenWindow(windowId, new CameraProjectionWindowProperties(cam, transformToFollow));
+                    break;
                 default:
                     uiFrame.OpenWindow(windowId);
                     break;
