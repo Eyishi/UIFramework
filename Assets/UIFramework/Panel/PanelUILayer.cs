@@ -59,7 +59,7 @@ namespace UIFramework
             Transform trans;
             if (!priorityLayers.ParaLayerLookup.TryGetValue(priority, out trans)) ;
             {
-                trans = transform;
+                // trans = transform;
             }
             screenTransform.SetParent(trans,false);
         }

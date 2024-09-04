@@ -34,7 +34,7 @@ namespace UIFramework.Examples
 
         private void OnStartDemo() {
             uiFrame.ShowPanel(ScreenIds.NavigationPanel);
-            // uiFrame.ShowPanel(ScreenIds.ToastPanel);
+            uiFrame.ShowPanel(ScreenIds.ToastPanel);
         }
 
         private void OnNavigateToWindow(string windowId) {

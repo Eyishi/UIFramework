@@ -33,7 +33,6 @@ RectTransform:
   - {fileID: 4933371486452348570}
   - {fileID: 7835963586836779705}
   m_Father: {fileID: 795429926949686570}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -88,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5924150215548257719}
   - component: {fileID: 4705433561442730310}
-  - component: {fileID: 2582112438795701029}
+  - component: {fileID: -2071166471636982229}
   m_Layer: 5
   m_Name: ToastPanel
   m_TagString: Untagged
@@ -110,7 +109,6 @@ RectTransform:
   m_Children:
   - {fileID: 795429926949686570}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -125,7 +123,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2198531993298414313}
   m_CullTransparentMesh: 0
---- !u!114 &2582112438795701029
+--- !u!114 &-2071166471636982229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +132,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2198531993298414313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8605f786ebb9fa438c790fd56239290, type: 3}
+  m_Script: {fileID: 11500000, guid: a8db34def6c44e6e8aaf8b0313c6f2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animIn: {fileID: 0}
@@ -144,7 +142,7 @@ MonoBehaviour:
   toastRect: {fileID: 795429926949686570}
   toastDuration: 0.5
   toastPause: 3
-  toastEase: 12
+  toastEase: 9
 --- !u!1 &3826402163125325674
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +175,6 @@ RectTransform:
   m_Children:
   - {fileID: 8987037450507234914}
   m_Father: {fileID: 5924150215548257719}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -253,7 +250,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8987037450507234914}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -333,7 +329,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8987037450507234914}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}

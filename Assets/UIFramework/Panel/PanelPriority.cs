@@ -8,7 +8,7 @@ namespace UIFramework
     /// </summary>
     public enum PanelPriority
     {
-        None=0,
+        None = 0,
         Prioritary = 1,
         Tutorial = 2,
         Blocker = 3,
