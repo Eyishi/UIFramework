@@ -67,7 +67,10 @@ namespace UIFramework.Examples
             // 默认选中第一个按钮
             OnNavigationButtonClicked(currentButtons[0]);
         }
-
+        /// <summary>
+        /// 设置选中的按钮
+        /// </summary>
+        /// <param name="currentlyClickedButton">这个按钮</param>
         private void OnNavigationButtonClicked(NavigationPanelButton currentlyClickedButton) {
             Signals.Get<NavigateToWindowSignal>().Dispatch(currentlyClickedButton.Target);
             foreach (var button in currentButtons) {
@@ -80,7 +83,9 @@ namespace UIFramework.Examples
                 button.SetCurrentNavigationTarget(screenId);
             }
         }
-
+        /// <summary>
+        /// 清除
+        /// </summary>
         private void ClearEntries() {
             foreach (var button in currentButtons) {
                 button.ButtonClicked -= OnNavigationButtonClicked;
