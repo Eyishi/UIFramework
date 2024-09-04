@@ -28,8 +28,14 @@ namespace UIFramework.Examples
     
     public class NavigationPanelController : PanelController
     {
+        /// <summary>
+        /// 导航栏上的按钮
+        /// </summary>
         [SerializeField] 
         private List<NavigationPanelEntry> navigationTargets = new List<NavigationPanelEntry>();
+        /// <summary>
+        /// 按钮的模板
+        /// </summary>
         [SerializeField] 
         private NavigationPanelButton templateButton = null;
         

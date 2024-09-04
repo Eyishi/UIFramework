@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using UIFramework.Examples.Extras;
 using Utils;
 using UnityEngine;
 
@@ -9,7 +9,7 @@ namespace UIFramework.Examples
     public class UIDemoController : MonoBehaviour
     {
         [SerializeField] private UISettings defaultUISettings = null;
-        // [SerializeField] private FakePlayerData fakePlayerData = null;
+        [SerializeField] private FakePlayerData fakePlayerData = null;
         [SerializeField] private Camera cam = null;
         [SerializeField] private Transform transformToFollow = null;
 
@@ -34,24 +34,24 @@ namespace UIFramework.Examples
 
         private void OnStartDemo() {
             uiFrame.ShowPanel(ScreenIds.NavigationPanel);
-            uiFrame.ShowPanel(ScreenIds.ToastPanel);
+            // uiFrame.ShowPanel(ScreenIds.ToastPanel);
         }
 
         private void OnNavigateToWindow(string windowId) {
             uiFrame.CloseCurrentWindow();
 
-            // switch (windowId) {
-            //     case ScreenIds.PlayerWindow:
-            //         uiFrame.OpenWindow(windowId, new PlayerWindowProperties(fakePlayerData.LevelProgress));
-            //         break;
-            //     case ScreenIds.CameraProjectionWindow:
-            //         transformToFollow.parent.gameObject.SetActive(true);
-            //         uiFrame.OpenWindow(windowId, new CameraProjectionWindowProperties(cam, transformToFollow));
-            //         break;
-            //     default:
-            //         uiFrame.OpenWindow(windowId);
-            //         break;
-            // }
+            switch (windowId) {
+                case ScreenIds.PlayerWindow:
+                    uiFrame.OpenWindow(windowId, new PlayerWindowProperties(fakePlayerData.LevelProgress));
+                    break;
+                // case ScreenIds.CameraProjectionWindow:
+                //     transformToFollow.parent.gameObject.SetActive(true);
+                //     uiFrame.OpenWindow(windowId, new CameraProjectionWindowProperties(cam, transformToFollow));
+                //     break;
+                default:
+                    uiFrame.OpenWindow(windowId);
+                    break;
+            }
         }
 
         // private void OnShowConfirmationPopup(ConfirmationPopupProperties popupPayload) {

@@ -14,7 +14,7 @@ namespace UIFramework
         [SerializeField] private WindowParaLayer priorityParaLayer = null;
         public IWindowController CurrentWindow { get; set; }
         
-        //队列和栈
+        //存放窗口的队列和栈
         private Queue<WindowHistoryEntry> windowQueue;
         private Stack<WindowHistoryEntry> windowHistory;
 
@@ -71,7 +71,12 @@ namespace UIFramework
         {
             ShowScreen<IWindowProperties>(screen,null);
         }
-
+        /// <summary>
+        /// 显示界面 ，判断界面是进入队列还是直接显示在前面
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <param name="properties"></param>
+        /// <typeparam name="Tprops"></typeparam>
         public override void ShowScreen<Tprops>(IWindowController screen, Tprops properties)
         {
             IWindowProperties windowProp = properties as IWindowProperties;
