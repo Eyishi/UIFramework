@@ -9,6 +9,9 @@ namespace UIFramework
     public enum PanelPriority
     {
         None = 0,
+        /// <summary>
+        /// 小弹出面板
+        /// </summary>
         Prioritary = 1,
         Tutorial = 2,
         Blocker = 3,

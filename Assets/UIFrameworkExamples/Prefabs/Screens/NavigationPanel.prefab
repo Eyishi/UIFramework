@@ -384,6 +384,9 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: abd2627bee866494b8620acce834aef7, type: 3}
     buttonText: "\u4E3B\u76F8\u673A"
     targetScreen: CameraProjectionWindow
+  - sprite: {fileID: 21300000, guid: 1fd8d7859bb1de84cade4861f6b2547c, type: 3}
+    buttonText: "\u5916\u5185\u7A97\u53E3"
+    targetScreen: OutWindow
   templateButton: {fileID: 5022294557515415716}
 --- !u!114 &8522999378106183302
 MonoBehaviour:

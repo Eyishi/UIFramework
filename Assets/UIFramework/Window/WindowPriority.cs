@@ -2,7 +2,13 @@
 {
     public enum WindowPriority
     {
-        ForceForeground = 0,//直接显示在前面
-        Enqueue = 1, //进队列
+        /// <summary>
+        /// 直接显示在前面
+        /// </summary>
+        ForceForeground = 0,
+        /// <summary>
+        /// 进队列
+        /// </summary>
+        Enqueue = 1, 
     }
 }

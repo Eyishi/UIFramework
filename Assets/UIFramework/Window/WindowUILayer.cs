@@ -89,7 +89,7 @@ namespace UIFramework
                 DoShow(screen, windowProp);
             }
         }
-
+        
         public override void HideScreen(IWindowController screen)
         {
             if (screen == CurrentWindow)
@@ -117,7 +117,7 @@ namespace UIFramework
                     screen.ScreenId,CurrentWindow!=null? CurrentWindow:"current window is null"));
             }
         }
-        
+
 
         /// <summary>
         /// 关闭所有
@@ -218,7 +218,8 @@ namespace UIFramework
         }
 
         private void DoShow(WindowHistoryEntry windowEntry) {
-            if (CurrentWindow == windowEntry.Screen) {
+            if (CurrentWindow == windowEntry.Screen) 
+            {
                 Debug.LogWarning(
                     string.Format(
                         "[WindowUILayer] The requested WindowId ({0}) is already open! This will add a duplicate to the " +
@@ -236,7 +237,8 @@ namespace UIFramework
             windowHistory.Push(windowEntry);
             AddTransition(windowEntry.Screen);
 
-            if (windowEntry.Screen.IsPopup) {
+            if (windowEntry.Screen.IsPopup) 
+            {
                 priorityParaLayer.DarkenBG();
             }
 

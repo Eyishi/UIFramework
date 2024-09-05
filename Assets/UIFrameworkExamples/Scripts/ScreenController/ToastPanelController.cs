@@ -41,7 +41,7 @@ namespace UIFramework.Examples
             isToasting = true;
             Sequence seq = DOTween.Sequence();
             
-            //移动
+            //窗口移动
             seq.Append(toastRect.DOAnchorPosY(0f, toastDuration).SetEase(toastEase));
             seq.AppendInterval(toastPause);
             seq.Append(toastRect.DOAnchorPosY(toastRect.rect.height, toastDuration).SetEase(toastEase));

@@ -19,5 +19,10 @@
         public const string ThreeDExample = "ThreeDExample";
 
         public const string ToastPanel = "ToastPanel";
+
+        public const string InWindow = "InWindow";
+        
+        public const string OutWindow = "OutWindow";
+
     }
 }

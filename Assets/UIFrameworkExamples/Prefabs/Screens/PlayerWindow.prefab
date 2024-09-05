@@ -313,6 +313,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animIn: {fileID: 2507057328041446898}
   animOut: {fileID: 1517359402092154599}
+  properties:
+    hideOnForegroundLost: 0
+    windowQueuePriority: 0
+    isPopup: 0
   templateLevelEntry: {fileID: 5343901898085929500}
 --- !u!114 &2507057328041446898
 MonoBehaviour:
@@ -1150,7 +1154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u73A9\u5BB6\u8FDB\u5EA6"
+  m_Text: "\u5173\u5361\u8FDB\u5EA6"
 --- !u!1 &7678775063965960122
 GameObject:
   m_ObjectHideFlags: 0

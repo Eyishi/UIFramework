@@ -6,12 +6,18 @@ namespace UIFramework {
     /// </summary>
     [System.Serializable] 
     public class WindowProperties : IWindowProperties {
+        /// <summary>
+        /// 是否隐藏掉前面的
+        /// </summary>
         [SerializeField] 
         protected bool hideOnForegroundLost = true;
 
         [SerializeField] 
         protected WindowPriority windowQueuePriority = WindowPriority.ForceForeground;
 
+        /// <summary>
+        /// 一个小弹窗
+        /// </summary>
         [SerializeField]
         protected bool isPopup = false;
 

@@ -50,8 +50,8 @@ namespace UIFramework.Examples
         public readonly Action ConfirmAction;
 
         public ConfirmationPopupProperties(string title, string message, 
-            string confirmButtonText = "Confirm", Action confirmAction = null,  
-            string cancelButtonText = "Cancel", Action cancelAction = null) {
+            string confirmButtonText = "确认", Action confirmAction = null,  
+            string cancelButtonText = "取消", Action cancelAction = null) {
             Title = title;
             Message = message;
             ConfirmButtonText = confirmButtonText;

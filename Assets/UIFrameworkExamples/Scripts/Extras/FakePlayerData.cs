@@ -5,6 +5,9 @@ using Utils;
 
 namespace UIFramework.Examples.Extras
 {
+    /// <summary>
+    /// 玩家的关卡数据
+    /// </summary>
     public class PlayerDataUpdatedSignal : ASignal<List<PlayerDataEntry>> { }
     [Serializable]
     public class PlayerDataEntry

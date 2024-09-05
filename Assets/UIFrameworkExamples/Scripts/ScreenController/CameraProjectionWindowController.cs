@@ -25,7 +25,7 @@ namespace UIFramework.Examples
 
         protected override void OnPropertiesSet() 
         {
-            CreateNewLabel(Properties.TransformToFollow,"看这里!", null);
+            CreateNewLabel(Properties.TransformToFollow,"在这里!", null);
         }
         protected override void WhileHiding() {
             foreach (var element in allElements) {
@@ -58,6 +58,4 @@ namespace UIFramework.Examples
         }
     }
     
-    
-   
 }
